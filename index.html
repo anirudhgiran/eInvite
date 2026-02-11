@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js" defer></script>
+    <title>Ishika weds Prateek</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="section hero">
+            <video id="hero-video" autoplay muted loop>
+                <source src="./static/hero-video.mp4" />
+            </video>
+            <div id="hero-text">
+                <p class="font-pw">save the date</p>
+                <h1 class="font-ny">Ishika & Prateek</h1>
+                <p class="font-pw">we are getting married!</p>
+                <p class="font-mont">June 23, 2026</p>
+                <p class="font-mont">Tuesday</p>
+            </div>
+            <div class="hero-cta">
+                <a class="font-mont" href="#rsvp">RSVP</a>
+            </div>
+        </div>
+        <div class="section countdown">
+            <div class="countdown-text">
+                <p class="font-mont">COUNTDOWN</p>
+                <h1 class="font-pw">To the big day</h1>
+            </div>
+            <div class="countdown-timer">
+                <div class="countdown-timer-item">
+                    <h1 id="days">00</h1>
+                    <p>Days</p>
+                </div>
+                <div class="countdown-timer-item">
+                    <h1 id="hours">00</h1>
+                    <p>Hours</p>
+                </div>
+                <div class="countdown-timer-item">
+                    <h1 id="minutes">00</h1>
+                    <p>Minutes</p>
+                </div>
+                <div class="countdown-timer-item">
+                    <h1 id="seconds">00</h1>
+                    <p>Seconds</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-aud-wrapper">
+        <audio id="bg-aud">
+            <source id="bg-aud-src" src="./static/almost_quiet_roads.mp3" type="audio/mpeg" muted="false" loop="true" />
+        </audio>
+        <img class="speaker-btns" src="./static/volume_off.svg" alt="" data-type="off" data-muted="true">
+        <img class="speaker-btns" src="./static/volume_up.svg" alt="" data-type="on" data-muted="false">
+    </div>
+</body>
+
+</html>

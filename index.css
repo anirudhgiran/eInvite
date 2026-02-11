@@ -1,0 +1,186 @@
+@charset "UTF-8";
+* {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-default);
+}
+
+*::-moz-selection {
+  color: #fff;
+  background-color: #000;
+}
+
+*::selection {
+  color: #fff;
+  background-color: #000;
+}
+
+@font-face {
+  font-family: "NewYork";
+  src: url("./static/fonts/newyork-webfont.ttf");
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./static/fonts/Montserrat-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "PlaywriteCU";
+  src: url("./static/fonts/PlaywriteCU-VariableFont_wght.ttf");
+}
+:root {
+  --fs-p: 0.8em;
+  --fs-h: 1.3em;
+  --ltr-spc: 5px;
+  --font-heading: "NewYork";
+  --font-sub-heading: "PlaywriteCU";
+  --font-default: "Montserrat";
+}
+
+.font-mont {
+  font-family: var(--font-default);
+}
+
+.font-ny {
+  font-family: var(--font-heading);
+}
+
+.font-pw {
+  font-family: var(--font-sub-heading);
+}
+
+body {
+  width: 100%;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #fcfcfc;
+}
+
+.container {
+  max-width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hero #hero-video {
+  width: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+       user-select: none;
+}
+.hero #hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hero #hero-text p {
+  font-size: var(--fs-p);
+}
+.hero #hero-text h1 {
+  font-size: var(--fs-h);
+  text-transform: uppercase;
+}
+.hero .hero-cta {
+  position: absolute;
+  bottom: 20px;
+}
+.hero .hero-cta a {
+  text-decoration: none;
+  letter-spacing: var(--ltr-spc);
+  text-transform: uppercase;
+  color: #000;
+}
+.hero .hero-cta a::after {
+  content: "↓";
+}
+
+.countdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.countdown .countdown-text {
+  position: relative;
+  text-align: center;
+}
+.countdown .countdown-text p {
+  font-size: var(--fs-p);
+  letter-spacing: var(--ltr-spc);
+}
+.countdown .countdown-text h1 {
+  font-size: var(--fs-h);
+  font-weight: 300;
+}
+.countdown .countdown-timer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+.countdown .countdown-timer .countdown-timer-item {
+  position: relative;
+  flex-grow: 1;
+  flex-shrink: 1;
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.countdown .countdown-timer .countdown-timer-item h1 {
+  font-family: "NewYork";
+}
+.countdown .countdown-timer .countdown-timer-item p {
+  font-family: var(--font-default);
+}
+
+.bg-aud-wrapper {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 10px;
+  right: 10px;
+  z-index: 99;
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.2941176471);
+}
+.bg-aud-wrapper .speaker-btns {
+  position: absolute;
+}/*# sourceMappingURL=index.css.map */
