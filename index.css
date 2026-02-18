@@ -36,6 +36,8 @@
   --font-heading: "NewYork";
   --font-sub-heading: "PlaywriteCU";
   --font-default: "Montserrat";
+  --color-light: #c3dbc5;
+  --color-dark: #012622;
 }
 
 .font-mont {
@@ -51,46 +53,83 @@
 }
 
 body {
-  width: 100%;
-  min-height: 100dvh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: #fcfcfc;
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
 }
-
-.container {
+body #intro-ctr {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s ease-out;
+  cursor: pointer;
+  z-index: 999;
+  overflow: hidden;
+}
+body #intro-ctr #intro-vid {
+  position: relative;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body #intro-ctr #intro-cta {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 150px;
+  height: 150px;
+  background: rgb(0, 0, 0);
+  border-radius: 50%;
+  animation: pulse 1s infinite alternate;
+  box-shadow: 0 0 15px 5px #000;
+}
+body #intro-ctr #intro-cta p {
+  color: #fff;
+}
+@keyframes pulse {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+body .container {
   max-width: 100%;
   overflow: hidden;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  z-index: 0;
 }
-
-.section {
+body .section {
   position: relative;
   width: 100%;
   height: auto;
   overflow: hidden;
-  margin-bottom: 50px;
+  padding: 50px 0;
+  z-index: 1;
 }
-
-.hero {
+body .hero {
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.hero #hero-video {
+body .hero #hero-video {
   width: 100%;
   -webkit-user-select: none;
   -moz-user-select: none;
        user-select: none;
 }
-.hero #hero-text {
+body .hero #hero-text {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -100,46 +139,47 @@ body {
   align-items: center;
   justify-content: center;
 }
-.hero #hero-text p {
+body .hero #hero-text p {
   font-size: var(--fs-p);
 }
-.hero #hero-text h1 {
+body .hero #hero-text h1 {
   font-size: var(--fs-h);
   text-transform: uppercase;
 }
-.hero .hero-cta {
+body .hero .hero-cta {
   position: absolute;
   bottom: 20px;
 }
-.hero .hero-cta a {
+body .hero .hero-cta a {
   text-decoration: none;
   letter-spacing: var(--ltr-spc);
   text-transform: uppercase;
   color: #000;
 }
-.hero .hero-cta a::after {
+body .hero .hero-cta a::after {
   content: "↓";
 }
-
-.countdown {
+body .countdown {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  background-color: var(--color-dark);
+  color: #fff;
 }
-.countdown .countdown-text {
+body .countdown .countdown-text {
   position: relative;
   text-align: center;
 }
-.countdown .countdown-text p {
+body .countdown .countdown-text p {
   font-size: var(--fs-p);
   letter-spacing: var(--ltr-spc);
 }
-.countdown .countdown-text h1 {
+body .countdown .countdown-text h1 {
   font-size: var(--fs-h);
   font-weight: 300;
 }
-.countdown .countdown-timer {
+body .countdown .countdown-timer {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -147,27 +187,54 @@ body {
   flex-wrap: wrap;
   padding: 20px;
 }
-.countdown .countdown-timer .countdown-timer-item {
+body .countdown .countdown-timer .countdown-timer-item {
   position: relative;
   flex-grow: 1;
   flex-shrink: 1;
   width: 100px;
   height: 100px;
-  background-color: pink;
+  background-color: var(--color-light);
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.countdown .countdown-timer .countdown-timer-item h1 {
+body .countdown .countdown-timer .countdown-timer-item h1 {
   font-family: "NewYork";
 }
-.countdown .countdown-timer .countdown-timer-item p {
+body .countdown .countdown-timer .countdown-timer-item p {
   font-family: var(--font-default);
 }
-
-.bg-aud-wrapper {
+body .events {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--color-light);
+  width: 100%;
+}
+body .events h1 {
+  color: #000;
+  letter-spacing: 5px;
+}
+body .events #events-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 700px;
+}
+body .events #events-content svg {
+  position: absolute;
+  width: 100%;
+  fill: var(--color-dark);
+  z-index: -1;
+}
+body .events #events-content svg path {
+  stroke: none;
+}
+body .bg-aud-wrapper {
   position: fixed;
   width: 50px;
   height: 50px;
@@ -181,6 +248,9 @@ body {
   z-index: 99;
   box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.2941176471);
 }
-.bg-aud-wrapper .speaker-btns {
+body .bg-aud-wrapper .speaker-btns {
   position: absolute;
+}
+body .bg-aud-wrapper .speaker-btns:nth-of-type(2) {
+  display: none;
 }/*# sourceMappingURL=index.css.map */
