@@ -7,7 +7,7 @@ const speakerBtns = document.querySelectorAll('.speaker-btns');
 const container = document.querySelector('.container');
 
 introCtr.addEventListener('click', () => {
-    // bgAud.play();
+    bgAud.play();
     introCta.style.display = 'none';
     introVid.play();
     container.style.display = 'flex';
