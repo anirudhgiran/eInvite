@@ -295,7 +295,7 @@ body .events ul li {
 body .events ul li .tl-itm-img {
   width: 100px;
   height: 100px;
-  background-color: var(--color-dark);
+  background: linear-gradient(127deg, rgb(206, 212, 229) 50%, rgb(230, 206, 211) 100%);
   border-radius: 50%;
   margin-right: 20px;
   display: flex;
