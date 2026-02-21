@@ -36,8 +36,8 @@
   --font-heading: "NewYork";
   --font-sub-heading: "PlaywriteCU";
   --font-default: "Montserrat";
-  --color-light: #c3dbc5;
-  --color-dark: #012622;
+  --color-light: #fefefe;
+  --color-dark: #ced4e5;
 }
 
 .font-mont {
@@ -50,6 +50,14 @@
 
 .font-pw {
   font-family: var(--font-sub-heading);
+}
+
+#svg-defs-hidden {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: visible;
+  pointer-events: none;
 }
 
 body {
@@ -211,27 +219,96 @@ body .events {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: var(--color-light);
   width: 100%;
 }
-body .events h1 {
+body .events:nth-of-type(odd) {
+  background-color: var(--color-light);
+}
+body .events:nth-of-type(odd) .evt-sec-hd {
+  color: #fff;
+}
+body .events:nth-of-type(odd) .events-content > div > a {
+  color: #fff;
+}
+body .events:nth-of-type(even) {
+  background-color: var(--color-dark);
+}
+body .events:nth-of-type(even) .evt-sec-hd::before {
+  background-color: var(--color-light);
+}
+body .events:nth-of-type(even) .events-content > div > a {
+  background-color: var(--color-light);
+}
+body .events .evt-sec-hd {
   color: #000;
   letter-spacing: 5px;
+  margin: 50px;
+  font-family: var(--font-heading);
 }
-body .events #events-content {
+body .events .evt-sec-hd::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px; /* match the SVG viewBox ratio (319x148) or set desired size */
+  height: 148px;
+  background: var(--color-dark); /* shape color */
+  clip-path: url(#mask);
+  z-index: -1;
+  pointer-events: none;
+}
+body .events .events-content {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 700px;
 }
-body .events #events-content svg {
+body .events .events-content div {
+  padding: 20px 0;
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body .events .events-content div p:nth-of-type(1) {
+  font-family: var(--font-sub-heading);
+}
+body .events .events-content div h1 {
+  font-family: var(--font-default);
+}
+body .events .events-content div a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  background-color: var(--color-dark);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 5px 5px #000;
+  margin-top: 20px;
+  cursor: pointer;
+}
+body .events .events-content div a img {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+body .events .events-content div a p {
+  font-family: var(--font-default);
+  letter-spacing: unset;
+  font-weight: normal;
+}
+body .events .events-content svg {
   position: absolute;
   width: 100%;
   fill: var(--color-dark);
   z-index: -1;
 }
-body .events #events-content svg path {
+body .events .events-content svg path {
   stroke: none;
 }
 body .bg-aud-wrapper {

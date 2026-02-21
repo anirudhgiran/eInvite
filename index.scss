@@ -33,8 +33,10 @@
   --font-heading: "NewYork";
   --font-sub-heading: "PlaywriteCU";
   --font-default: "Montserrat";
-  --color-light: #c3dbc5;
-  --color-dark: #012622;
+  // --color-light: #c3dbc5;
+  // --color-dark: #012622;
+  --color-light: #fefefe;
+  --color-dark: #ced4e5;
 }
 
 .font-mont {
@@ -47,6 +49,14 @@
 
 .font-pw {
   font-family: var(--font-sub-heading);
+}
+
+#svg-defs-hidden {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: visible;
+  pointer-events: none;
 }
 
 body {
@@ -231,20 +241,102 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-color: var(--color-light);
     width: 100%;
 
-    h1 {
-      color: #000;
-      letter-spacing: 5px;
+    &:nth-of-type(odd) {
+      background-color: var(--color-light);
+      
+      .evt-sec-hd {
+        color: #fff;
+      }
+
+      .events-content > div > a {
+        color: #fff;
+      }
+    }
+    &:nth-of-type(even) {
+      background-color: var(--color-dark);
+
+      .evt-sec-hd::before {
+        background-color: var(--color-light);
+      }
+
+      .events-content > div > a {
+        background-color: var(--color-light);
+      }
     }
 
-    #events-content {
+    .evt-sec-hd {
+      color: #000;
+      letter-spacing: 5px;
+      margin: 50px;
+      font-family: var(--font-heading);
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 320px; /* match the SVG viewBox ratio (319x148) or set desired size */
+        height: 148px;
+        background: var(--color-dark); /* shape color */
+        -webkit-clip-path: url(#mask);
+        clip-path: url(#mask);
+        z-index: -1;
+        pointer-events: none;
+      }
+    }
+
+    .events-content {
       display: flex;
       justify-content: center;
       align-items: center;
       width: 100%;
-      min-height: 700px;
+
+      div {
+        padding: 20px 0;
+        width: 90%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        p {
+          &:nth-of-type(1) {
+            font-family: var(--font-sub-heading);
+          }
+        }
+        h1 {
+          font-family: var(--font-default);
+        }
+        a {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          text-decoration: none;
+          color: #000;
+          background-color: var(--color-dark);
+          padding: 10px;
+          border-radius: 5px;
+          box-shadow: 0 5px 5px #000;
+          margin-top: 20px;
+          cursor: pointer;
+
+          img {
+            position: relative;
+            width: 24px;
+            height: 24px;
+          }
+
+          p {
+            font-family: var(--font-default);
+            letter-spacing: unset;
+            font-weight: normal;
+          }
+        }
+      }
 
       svg {
         position: absolute;
