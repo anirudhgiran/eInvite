@@ -149,6 +149,7 @@ body .hero #hero-text {
 }
 body .hero #hero-text p {
   font-size: var(--fs-p);
+  margin: 10px 0;
 }
 body .hero #hero-text h1 {
   font-size: var(--fs-h);
@@ -172,8 +173,8 @@ body .countdown {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background-color: var(--color-dark);
-  color: #fff;
+  background: linear-gradient(123deg, rgb(206, 212, 229) 0%, rgb(230, 206, 211) 100%);
+  color: #000;
 }
 body .countdown .countdown-text {
   position: relative;
@@ -231,7 +232,7 @@ body .events:nth-of-type(odd) .events-content > div > a {
   color: #fff;
 }
 body .events:nth-of-type(even) {
-  background-color: var(--color-dark);
+  background: linear-gradient(123deg, rgb(206, 212, 229) 0%, rgb(230, 206, 211) 100%);
 }
 body .events:nth-of-type(even) .evt-sec-hd::before {
   background-color: var(--color-light);
