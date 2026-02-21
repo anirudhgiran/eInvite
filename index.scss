@@ -61,6 +61,7 @@
 body {
   position: relative;
   width: 100vw;
+  max-width: 500px;
   min-height: 100vh;
 
   #intro-ctr {
@@ -89,7 +90,7 @@ body {
       flex-direction: column;
       width: 150px;
       height: 150px;
-      background: rgba(0, 0, 0, 1);
+      background: #000;
       border-radius: 50%;
       animation: pulse 1s infinite alternate;
       box-shadow: 0 0 15px 5px #000;
@@ -166,7 +167,7 @@ body {
     width: 100%;
     height: auto;
     overflow: hidden;
-    padding-top: 50px;
+    margin-bottom: 50px;
 
     * {
       z-index: 2;
@@ -179,6 +180,7 @@ body {
     align-items: center;
     width: 80%;
     gap: 10px;
+    text-align: center;
 
     p:nth-of-type(1) {
       font-size: 12px;
@@ -247,6 +249,7 @@ body {
       rgba(230, 206, 211, 1) 100%
     );
     color: #000;
+    padding: 50px 0;
 
     .countdown-text {
       position: relative;
@@ -321,6 +324,7 @@ body {
         width: auto;
         align-items: center;
         margin-bottom: 50px;
+
         .tl-itm-img {
           width: 100px;
           height: 100px;
@@ -353,6 +357,7 @@ body {
           flex-direction: column;
           align-items: flex-start;
           justify-content: center;
+          gap: 10px;
 
           p {
             &:nth-of-type(1) {
@@ -363,8 +368,12 @@ body {
           }
         }
 
-        &:last-of-type > .tl-itm-img::after {
-          display: none;
+        &:last-of-type {
+          margin-bottom: unset;
+
+          .tl-itm-img::after {
+            display: none;
+          }
         }
       }
     }
@@ -376,7 +385,6 @@ body {
     flex-direction: row;
     align-items: center;
     width: 80%;
-    padding: unset;
 
     div {
       position: relative;
