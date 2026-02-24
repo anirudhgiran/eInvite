@@ -121,6 +121,7 @@ body .container {
 body .border-imgs {
   position: absolute;
   width: 100vw;
+  max-width: 500px;
   height: auto;
   z-index: 1;
   top: 100vh;
@@ -290,12 +291,12 @@ body .events ul li {
   justify-content: flex-start;
   width: auto;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 body .events ul li .tl-itm-img {
   width: 100px;
   height: 100px;
-  background: linear-gradient(127deg, rgb(206, 212, 229) 50%, rgb(230, 206, 211) 100%);
+  background-color: var(--color-dark);
   border-radius: 50%;
   margin-right: 20px;
   display: flex;
@@ -309,7 +310,7 @@ body .events ul li .tl-itm-img h1 {
 body .events ul li .tl-itm-img::after {
   content: "";
   width: 2px;
-  height: 100px;
+  height: 150px;
   left: 50%;
   transform: translate(-50%, 0);
   top: 100%;
@@ -351,6 +352,7 @@ body .divider img {
   position: relative;
   width: 24px;
   margin: 0px 10px;
+  opacity: 0.5;
 }
 body .bg-aud-wrapper {
   position: fixed;

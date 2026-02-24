@@ -31,6 +31,9 @@ if (params !== null) {
     events.children[1].insertBefore(li, events.children[1].children[0].nextSibling)
 }
 
+let autoScroll = false;
+let newScrollTo = 0;
+
 introCtr.addEventListener('click', () => {
     bgAud.play();
     introCta.style.display = 'none';
@@ -43,7 +46,26 @@ introCtr.addEventListener('click', () => {
     setTimeout(() => {
         introCtr.style.display = 'none';
     }, 1000)
+    autoScroll = true;
 })
+
+document.addEventListener('mousemove', () => {
+    autoScroll = false;
+})
+document.addEventListener('touchmove', () => {
+    autoScroll = false;
+})
+
+setTimeout(() => {
+
+    setInterval(() => {
+        if (autoScroll) {
+            newScrollTo += 50;
+            window.scrollTo({ left: 0, top: newScrollTo, behavior: "smooth" });
+        }
+    }, 1000);
+
+}, 1500);
 
 bgAudWrapper.addEventListener('click', () => {
     bgAud.muted = !bgAud.muted;
