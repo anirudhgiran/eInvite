@@ -60,9 +60,10 @@
 
 body {
   position: relative;
-  width: 100vw;
+  width: 100%;
   max-width: 500px;
   min-height: 100vh;
+  margin: 0 auto;
 
   #intro-ctr {
     position: absolute;
@@ -118,6 +119,7 @@ body {
     align-items: center;
     justify-content: flex-start;
     z-index: 0;
+    position: relative;
   }
 
   .border-imgs {
@@ -129,6 +131,9 @@ body {
     top: 100vh;
     display: flex;
     flex-direction: column;
+    -webkit-user-select: none;
+    user-select: none;
+    pointer-events: none;
 
     div {
       width: 100%;
@@ -196,7 +201,7 @@ body {
     justify-content: center;
 
     #hero-video {
-      width: 100%;
+      width: 150%;
       -webkit-user-select: none;
       user-select: none;
     }

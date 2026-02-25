@@ -42,10 +42,10 @@ introCtr.addEventListener('click', () => {
     setTimeout(() => {
         document.body.style.overflow = 'auto';
         introCtr.style.opacity = '0'
-    }, 500);
+    }, 950);
     setTimeout(() => {
         introCtr.style.display = 'none';
-    }, 1000)
+    }, 1300)
     autoScroll = true;
 })
 

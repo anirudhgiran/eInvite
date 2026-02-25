@@ -63,9 +63,10 @@
 
 body {
   position: relative;
-  width: 100vw;
+  width: 100%;
   max-width: 500px;
   min-height: 100vh;
+  margin: 0 auto;
 }
 body #intro-ctr {
   position: absolute;
@@ -117,6 +118,7 @@ body .container {
   align-items: center;
   justify-content: flex-start;
   z-index: 0;
+  position: relative;
 }
 body .border-imgs {
   position: absolute;
@@ -127,6 +129,10 @@ body .border-imgs {
   top: 100vh;
   display: flex;
   flex-direction: column;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+       user-select: none;
+  pointer-events: none;
 }
 body .border-imgs div {
   width: 100%;
@@ -183,7 +189,7 @@ body .hero {
   justify-content: center;
 }
 body .hero #hero-video {
-  width: 100%;
+  width: 150%;
   -webkit-user-select: none;
   -moz-user-select: none;
        user-select: none;
