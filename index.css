@@ -288,6 +288,14 @@ body .events .evt-sec-hd {
   padding: 10px 50px;
   border-radius: 999em;
 }
+body .events p {
+  padding: 20px;
+  font-size: 18px;
+  line-height: 2;
+}
+body .events p:first-of-type {
+  padding: unset;
+}
 body .events ul {
   list-style: none;
 }
@@ -326,14 +334,46 @@ body .events ul li .tl-itm-img::after {
 body .events ul li .tl-itm-cntnt {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   gap: 10px;
 }
-body .events ul li .tl-itm-cntnt p:nth-of-type(1) {
-  background-color: var(--color-accent);
-  padding: 5px 10px;
-  border-radius: 5px;
+body .events ul li .tl-itm-cntnt p {
+  text-align: center;
+  width: 80%;
+}
+body .events ul li .tl-itm-cntnt .venueBox {
+  padding: 20px;
+  z-index: 2;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  gap: 15px;
+}
+body .events ul li .tl-itm-cntnt .venueBox svg {
+  width: 50px;
+  height: 50px;
+  fill: var(--color-accent);
+  border-radius: 50%;
+  background-color: #e6879a;
+  padding: 5px;
+}
+body .events ul li .tl-itm-cntnt .venueBox svg path {
+  fill: var(--color-accent);
+}
+body .events ul li .tl-itm-cntnt .venueBox iframe {
+  border-radius: 15px;
+  width: 380px;
+  height: 250px;
+  border: 0;
+  box-shadow: 0 0 10px -5px #000;
+}
+body .events ul li .tl-itm-cntnt .venueBox p {
+  padding: unset;
+  font-size: 16px;
 }
 body .events ul li:last-of-type {
   margin-bottom: unset;

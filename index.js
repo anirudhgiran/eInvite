@@ -6,31 +6,6 @@ const bgAudWrapper = document.querySelector('.bg-aud-wrapper');
 const speakerBtns = document.querySelectorAll('.speaker-btns');
 const container = document.querySelector('.container');
 
-const urlParams = new URLSearchParams(window.location.search);
-const ALL_EVENTS = 'd5f87eb5-20a6-4cc5-83c5-6c37a4d200b6';
-const params = urlParams.get(ALL_EVENTS);
-const events = document.querySelector('.events');
-
-if (params !== null) {
-    let li = document.createElement('li')
-    li.innerHTML = ` 
-                    <div class="tl-itm-img">
-                        <p>Sun.</p>
-                        <h1>21</h1>
-                        <p>June</p>
-                    </div>
-                    <div class="tl-itm-cntnt">
-                        <p>6PM Onwards</p>
-                        <h3>Ring Ceremony</h3>
-                        <p>Venue: The Cove, Panchkula</p>
-                        <a href="https://maps.app.goo.gl/btMf7tSqWqmXanaDA" target="_blank" rel="noopener">Get
-                            Directions</a>
-                    </div>
-                    `;
-
-    events.children[1].insertBefore(li, events.children[1].children[0].nextSibling)
-}
-
 let autoScroll = false;
 let newScrollTo = 0;
 
@@ -65,7 +40,7 @@ setTimeout(() => {
         }
     }, 1000);
 
-}, 1500);
+}, 3800);
 
 bgAudWrapper.addEventListener('click', () => {
     bgAud.muted = !bgAud.muted;
