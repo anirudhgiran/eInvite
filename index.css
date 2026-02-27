@@ -266,6 +266,7 @@ body .countdown .countdown-timer .countdown-timer-item {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.3960784314);
 }
 body .countdown .countdown-timer .countdown-timer-item h1 {
   font-family: "NewYork";
