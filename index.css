@@ -80,6 +80,12 @@ body #intro-ctr {
   z-index: 999;
   overflow: hidden;
 }
+body #intro-ctr #Layer_1 {
+  position: absolute;
+  top: 160px;
+  width: 100px;
+  fill: #e06d5e;
+}
 body #intro-ctr #intro-vid {
   position: relative;
   height: 100%;
@@ -92,15 +98,11 @@ body #intro-ctr #intro-cta {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 150px;
-  height: 150px;
-  background: #000;
-  border-radius: 50%;
   animation: pulse 1s infinite alternate;
-  box-shadow: 0 0 15px 5px #000;
+  bottom: 20px;
 }
 body #intro-ctr #intro-cta p {
-  color: #fff;
+  color: #000;
 }
 @keyframes pulse {
   from {
@@ -221,6 +223,7 @@ body .hero .hero-cta a {
   letter-spacing: var(--ltr-spc);
   text-transform: uppercase;
   color: #000;
+  font-size: 8px;
 }
 body .hero .hero-cta a::after {
   content: "↓";
@@ -232,7 +235,7 @@ body .countdown {
   justify-content: flex-start;
   background: linear-gradient(123deg, rgb(206, 212, 229) 0%, rgb(230, 206, 211) 100%);
   color: #000;
-  padding: 50px 0;
+  padding: 20px 0;
 }
 body .countdown .countdown-text {
   position: relative;
@@ -252,14 +255,14 @@ body .countdown .countdown-timer {
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
-  padding: 20px;
+  padding-top: 10px;
 }
 body .countdown .countdown-timer .countdown-timer-item {
   position: relative;
   flex-grow: 1;
   flex-shrink: 1;
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   background-color: var(--color-light);
   border-radius: 5px;
   display: flex;
@@ -270,9 +273,11 @@ body .countdown .countdown-timer .countdown-timer-item {
 }
 body .countdown .countdown-timer .countdown-timer-item h1 {
   font-family: "NewYork";
+  font-size: 18px;
 }
 body .countdown .countdown-timer .countdown-timer-item p {
   font-family: var(--font-default);
+  font-size: 14px;
 }
 body .events {
   display: flex;
@@ -280,6 +285,7 @@ body .events {
   justify-content: flex-start;
   align-items: center;
   width: 100%;
+  margin-bottom: 10px;
 }
 body .events .evt-sec-hd {
   color: #000;
@@ -352,7 +358,6 @@ body .events ul li .tl-itm-cntnt .venueBox {
   align-items: center;
   justify-content: center;
   border-radius: 15px;
-  gap: 15px;
 }
 body .events ul li .tl-itm-cntnt .venueBox svg {
   width: 50px;
@@ -361,20 +366,56 @@ body .events ul li .tl-itm-cntnt .venueBox svg {
   border-radius: 50%;
   background-color: #e6879a;
   padding: 5px;
+  margin-top: 15px;
+  margin-bottom: 5px;
 }
 body .events ul li .tl-itm-cntnt .venueBox svg path {
   fill: var(--color-accent);
 }
-body .events ul li .tl-itm-cntnt .venueBox iframe {
-  border-radius: 15px;
-  width: 380px;
-  height: 250px;
-  border: 0;
-  box-shadow: 0 0 10px -5px #000;
-}
 body .events ul li .tl-itm-cntnt .venueBox p {
   padding: unset;
+  font-size: 14px;
+}
+body .events ul li .tl-itm-cntnt .venueBox p:first-of-type {
   font-size: 16px;
+  line-height: 18px;
+}
+body .events ul li .tl-itm-cntnt .venueBox #event-btns {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+body .events ul li .tl-itm-cntnt .venueBox #event-btns a {
+  text-decoration: none;
+  font-size: 14px;
+  background-color: #cfdaf6;
+  color: #000;
+  padding: 16px;
+  border-radius: 10px;
+  font-weight: 500;
+  width: 100%;
+  text-align: center;
+  line-height: 35px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+body .events ul li .tl-itm-cntnt .venueBox #event-btns a svg {
+  background-color: unset;
+  fill: #000;
+  width: 35px;
+  height: 35px;
+  margin: unset;
+}
+body .events ul li .tl-itm-cntnt .venueBox #event-btns a svg path {
+  fill: #000;
+}
+body .events ul li .tl-itm-cntnt .venueBox #event-btns a:last-of-type {
+  background-color: rgba(207, 218, 246, 0.4745098039);
 }
 body .events ul li:last-of-type {
   margin-bottom: unset;
