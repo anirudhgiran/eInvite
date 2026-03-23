@@ -1,5 +1,18 @@
 {
   "projects": {
     "default": "diginvite-app"
-  }
+  },
+  "targets": {
+    "diginvite-app": {
+      "hosting": {
+        "prateek-and-ishika": [
+          "prateek-and-ishika"
+        ],
+        "ishika-and-prateek": [
+          "ishika-and-prateek"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
