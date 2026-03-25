@@ -5,6 +5,9 @@
   "targets": {
     "diginvite-app": {
       "hosting": {
+        "diginvite-app": [
+          "diginvite-app"
+        ],
         "prateek-and-ishika": [
           "prateek-and-ishika"
         ],

@@ -1,7 +1,8 @@
 {
   "hosting": [
     {
-      "public": "./",
+      "site": "diginvite-app",
+      "public": "public",
       "ignore": [
         "firebase.json",
         "**/.*",
