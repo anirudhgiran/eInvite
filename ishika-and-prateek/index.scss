@@ -89,15 +89,11 @@ body {
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      width: 150px;
-      height: 150px;
-      background: #000;
-      border-radius: 50%;
       animation: pulse 1s infinite alternate;
-      box-shadow: 0 0 15px 5px #000;
+      bottom: 20px;
 
       p {
-        color: #fff;
+        color: #000;
       }
     }
 
@@ -189,7 +185,7 @@ body {
     text-align: center;
 
     p:nth-of-type(1) {
-      font-size: 12px;
+      font-size: 28px;
     }
   }
 
@@ -236,6 +232,7 @@ body {
         letter-spacing: var(--ltr-spc);
         text-transform: uppercase;
         color: #000;
+        font-size: 8px;
 
         &::after {
           content: "\02193";

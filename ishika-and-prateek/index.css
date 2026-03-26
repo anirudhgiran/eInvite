@@ -92,15 +92,11 @@ body #intro-ctr #intro-cta {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 150px;
-  height: 150px;
-  background: #000;
-  border-radius: 50%;
   animation: pulse 1s infinite alternate;
-  box-shadow: 0 0 15px 5px #000;
+  bottom: 20px;
 }
 body #intro-ctr #intro-cta p {
-  color: #fff;
+  color: #000;
 }
 @keyframes pulse {
   from {
@@ -179,7 +175,7 @@ body .salutations {
   text-align: center;
 }
 body .salutations p:nth-of-type(1) {
-  font-size: 12px;
+  font-size: 28px;
 }
 body .hero {
   height: 100vh;
@@ -221,6 +217,7 @@ body .hero .hero-cta a {
   letter-spacing: var(--ltr-spc);
   text-transform: uppercase;
   color: #000;
+  font-size: 8px;
 }
 body .hero .hero-cta a::after {
   content: "↓";
