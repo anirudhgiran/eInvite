@@ -65,7 +65,7 @@ setTimeout(() => {
         }
     }, 1000);
 
-}, 1500);
+}, 3800);
 
 bgAudWrapper.addEventListener('click', () => {
     bgAud.muted = !bgAud.muted;
