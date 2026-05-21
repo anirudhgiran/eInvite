@@ -20,7 +20,7 @@ if (params !== null) {
                         <p>June</p>
                     </div>
                     <div class="tl-itm-cntnt">
-                        <p>6PM Onwards</p>
+                        <p>7PM Onwards</p>
                         <h3>Ring Ceremony</h3>
                         <p>Venue: The Cove, Panchkula</p>
                         <a href="https://maps.app.goo.gl/btMf7tSqWqmXanaDA" target="_blank" rel="noopener">Get
