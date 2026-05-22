@@ -177,6 +177,10 @@ body .salutations {
 body .salutations p:nth-of-type(1) {
   font-size: 28px;
 }
+body .salutations p:nth-of-type(2) {
+  font-size: 18px;
+  line-height: 1.5;
+}
 body .hero {
   height: 100vh;
   display: flex;
@@ -229,7 +233,7 @@ body .countdown {
   justify-content: flex-start;
   background: linear-gradient(123deg, rgb(206, 212, 229) 0%, rgb(230, 206, 211) 100%);
   color: #000;
-  padding: 50px 0;
+  padding: 20px 0;
 }
 body .countdown .countdown-text {
   position: relative;
@@ -249,26 +253,29 @@ body .countdown .countdown-timer {
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
-  padding: 20px;
+  padding-top: 10px;
 }
 body .countdown .countdown-timer .countdown-timer-item {
   position: relative;
   flex-grow: 1;
   flex-shrink: 1;
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   background-color: var(--color-light);
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.3960784314);
 }
 body .countdown .countdown-timer .countdown-timer-item h1 {
   font-family: "NewYork";
+  font-size: 18px;
 }
 body .countdown .countdown-timer .countdown-timer-item p {
   font-family: var(--font-default);
+  font-size: 14px;
 }
 body .events {
   display: flex;
