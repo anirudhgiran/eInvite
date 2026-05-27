@@ -7,7 +7,7 @@ const speakerBtns = document.querySelectorAll('.speaker-btns');
 const container = document.querySelector('.container');
 
 const urlParams = new URLSearchParams(window.location.search);
-const ALL_EVENTS = 'd5f87eb5-20a6-4cc5-83c5-6c37a4d200b6';
+const ALL_EVENTS = 'a';
 const params = urlParams.get(ALL_EVENTS);
 const events = document.querySelector('.events');
 
